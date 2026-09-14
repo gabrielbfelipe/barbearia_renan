@@ -1,0 +1,53 @@
+/* Botão flutuante de WhatsApp (itens 28, 30) — discreto no desktop, maior
+   área de toque no celular. Some perto do CTA final via main.js. */
+
+.whatsapp-flutuante {
+  position: fixed;
+  right: 1.35rem;
+  bottom: 1.35rem;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--cor-dourado);
+  color: var(--cor-fundo);
+  box-shadow: var(--sombra-card);
+  opacity: 0;
+  transform: translateY(14px) scale(0.9);
+  pointer-events: none;
+  transition: opacity var(--transicao-padrao), transform var(--transicao-padrao), background var(--transicao-rapida);
+}
+
+.whatsapp-flutuante.is-visivel {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.whatsapp-flutuante:hover {
+  background: var(--cor-dourado-claro);
+}
+
+.whatsapp-flutuante svg {
+  width: 26px;
+  height: 26px;
+}
+
+@media (max-width: 600px) {
+  .whatsapp-flutuante {
+    width: 60px;
+    height: 60px;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-flutuante {
+    transition: opacity 0.2s linear;
+    transform: none;
+  }
+}

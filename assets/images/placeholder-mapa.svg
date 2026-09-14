@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustração esquemática do mapa da região">
+  <rect width="1200" height="700" fill="#191612"/>
+  <g stroke="#2A2119" stroke-width="2">
+    <line x1="0" y1="200" x2="1200" y2="220"/>
+    <line x1="0" y1="420" x2="1200" y2="400"/>
+    <line x1="300" y1="0" x2="280" y2="700"/>
+    <line x1="820" y1="0" x2="860" y2="700"/>
+  </g>
+  <circle cx="600" cy="330" r="10" fill="#B99655"/>
+  <path d="M600 330 a1 1 0 0 1 0 -40" stroke="#B99655" stroke-width="2" fill="none" opacity="0.5"/>
+</svg>

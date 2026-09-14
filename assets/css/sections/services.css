@@ -1,0 +1,17 @@
+/* Serviços — grid de cards (item 18); estilo do card em components/cards.css. */
+
+.servicos {
+  background: var(--cor-fundo-secundario);
+}
+
+.servicos__grid {
+  display: grid;
+  gap: var(--espaco-lg);
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+
+.servicos__aviso {
+  margin-top: var(--espaco-lg);
+  font-size: 0.85rem;
+  color: var(--cor-texto-suave);
+}

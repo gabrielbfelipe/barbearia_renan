@@ -1,0 +1,81 @@
+/* Localização — endereço, horário e facade do Google Maps (itens 26–27). */
+
+.localizacao {
+  background: var(--cor-fundo-secundario);
+}
+
+.localizacao__grid {
+  display: grid;
+  gap: var(--espaco-xl);
+}
+
+.localizacao__lista {
+  margin-top: var(--espaco-lg);
+}
+
+.localizacao__item {
+  margin-bottom: var(--espaco-md);
+}
+
+.localizacao__rotulo {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cor-dourado);
+  margin-bottom: 0.4rem;
+}
+
+.localizacao__valor {
+  color: var(--cor-branco-quente);
+  font-size: 1.05rem;
+  max-width: none;
+}
+
+.localizacao__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-sm);
+  margin-top: var(--espaco-lg);
+}
+
+/* Facade do mapa — nenhuma requisição ao Google até o clique. */
+.mapa-facade {
+  position: relative;
+  min-height: 340px;
+  overflow: hidden;
+  border: 1px solid var(--cor-borda);
+  background: var(--cor-fundo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapa-facade__imagem {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.mapa-facade__btn {
+  position: relative;
+  z-index: 1;
+}
+
+.mapa-facade iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (min-width: 900px) {
+  .localizacao__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

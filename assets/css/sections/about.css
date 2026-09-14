@@ -1,0 +1,56 @@
+/* A Barbearia — layout dividido imagem/texto (item 14). */
+
+.sobre__grid {
+  display: grid;
+  gap: var(--espaco-xl);
+  align-items: center;
+}
+
+.sobre__media {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--cor-borda);
+}
+
+.sobre__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sobre__texto p {
+  max-width: 52ch;
+  margin-bottom: var(--espaco-sm);
+}
+
+.sobre__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: var(--espaco-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cor-dourado);
+}
+
+.sobre__tags span:not(:last-child)::after {
+  content: "•";
+  margin-left: 0.6rem;
+  color: var(--cor-texto-suave);
+}
+
+@media (min-width: 860px) {
+  .sobre__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sobre__grid--invertido {
+    direction: rtl;
+  }
+
+  .sobre__grid--invertido > * {
+    direction: ltr;
+  }
+}

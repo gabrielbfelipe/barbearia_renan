@@ -1,0 +1,38 @@
+/* Galeria — masonry editorial (item 21), populada por main.js a partir de
+   IMAGENS.galeria (config.js). CSS columns cria o efeito escalonado sem
+   precisar calcular alturas em JS. */
+
+.galeria__grid {
+  columns: 2;
+  column-gap: var(--espaco-sm);
+}
+
+.galeria__item {
+  break-inside: avoid;
+  margin-bottom: var(--espaco-sm);
+  overflow: hidden;
+  border: 1px solid var(--cor-borda);
+}
+
+.galeria__item img {
+  width: 100%;
+  height: auto;
+  transition: transform var(--transicao-lenta), filter var(--transicao-padrao);
+  filter: saturate(0.92);
+}
+
+.galeria__item:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.05);
+}
+
+@media (min-width: 700px) {
+  .galeria__grid {
+    columns: 3;
+    column-gap: var(--espaco-md);
+  }
+
+  .galeria__item {
+    margin-bottom: var(--espaco-md);
+  }
+}

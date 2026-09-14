@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barber Shop Renan | Barbearia em Araraquara – SP</title>
+  <meta
+    name="description"
+    content="Barber Shop Renan em Araraquara, SP. Corte masculino, barba, sobrancelhas e cuidados masculinos. Fale com o Renan e consulte horários pelo WhatsApp."
+  />
+  <link rel="canonical" href="URL_DO_SITE" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Barber Shop Renan" />
+  <meta property="og:title" content="Barber Shop Renan | Barbearia em Araraquara – SP" />
+  <meta
+    property="og:description"
+    content="Corte masculino, barba, sobrancelhas e cuidados masculinos. Tradição e estilo em Araraquara, SP."
+  />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=70" />
+  <meta property="og:url" content="URL_DO_SITE" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Barber Shop Renan | Barbearia em Araraquara – SP" />
+  <meta name="twitter:description" content="Corte masculino, barba, sobrancelhas e cuidados masculinos em Araraquara, SP." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=70" />
+
+  <!-- Favicon / manifest -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/logo-provisorio.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#11100E" />
+
+  <!-- Preconnect: fontes e imagens remotas do Unsplash (provisórias) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+
+  <!-- Fontes: Cormorant Garamond (títulos) + Montserrat (interface) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS modular via <link> (não @import, para baixar em paralelo) -->
+  <link rel="stylesheet" href="assets/css/base/reset.css" />
+  <link rel="stylesheet" href="assets/css/base/variables.css" />
+  <link rel="stylesheet" href="assets/css/base/layout.css" />
+  <link rel="stylesheet" href="assets/css/base/motion.css" />
+  <link rel="stylesheet" href="assets/css/components/preloader.css" />
+  <link rel="stylesheet" href="assets/css/components/header.css" />
+  <link rel="stylesheet" href="assets/css/components/buttons.css" />
+  <link rel="stylesheet" href="assets/css/components/cards.css" />
+  <link rel="stylesheet" href="assets/css/components/marquee.css" />
+  <link rel="stylesheet" href="assets/css/components/reviews.css" />
+  <link rel="stylesheet" href="assets/css/components/floating.css" />
+  <link rel="stylesheet" href="assets/css/sections/hero.css" />
+  <link rel="stylesheet" href="assets/css/sections/about.css" />
+  <link rel="stylesheet" href="assets/css/sections/identity.css" />
+  <link rel="stylesheet" href="assets/css/sections/barber.css" />
+  <link rel="stylesheet" href="assets/css/sections/quote.css" />
+  <link rel="stylesheet" href="assets/css/sections/services.css" />
+  <link rel="stylesheet" href="assets/css/sections/experience.css" />
+  <link rel="stylesheet" href="assets/css/sections/gallery.css" />
+  <link rel="stylesheet" href="assets/css/sections/location.css" />
+  <link rel="stylesheet" href="assets/css/sections/cta.css" />
+  <link rel="stylesheet" href="assets/css/sections/footer.css" />
+
+  <!-- Crítico do preloader, inline para pintar antes do CSS externo chegar -->
+  <style>
+    body:not(.is-carregado) {
+      overflow: hidden;
+    }
+    .preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      background: #11100e;
+    }
+  </style>
+
+  <!-- Dados estruturados — HairSalon. Sem preços, sem aggregateRating e sem
+       geo até que esses dados sejam confirmados pelo proprietário. -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Barber Shop Renan",
+      "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=70",
+      "logo": "URL_DO_SITE/assets/images/logo/logo-provisorio.svg",
+      "url": "URL_DO_SITE",
+      "telephone": "+5516997479907",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua José do Patrocínio, 582",
+        "addressLocality": "Araraquara",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "areaServed": "Araraquara, SP",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corte Masculino" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Barba" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sobrancelhas" } }
+        ]
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="preloader" data-preloader aria-hidden="true">
+    <img class="preloader__logo" src="assets/images/logo/logo-provisorio.svg" alt="" width="64" height="64" />
+    <p class="preloader__nome">Barber Shop Renan</p>
+    <div class="preloader__linha"></div>
+  </div>
+
+  <a class="sr-only" href="#conteudo-principal">Pular para o conteúdo</a>
+
+  <header class="header" data-header>
+    <a href="#inicio" class="header__logo">
+      <img class="header__logo-img" src="assets/images/logo/logo-provisorio.svg" alt="" width="42" height="42" />
+      Barber Shop <em>Renan</em>
+    </a>
+
+    <nav class="header__nav" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#barbearia">A Barbearia</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#localizacao">Localização</a>
+    </nav>
+
+    <div class="header__acoes">
+      <a class="btn btn--primario" data-whatsapp-link target="_blank" rel="noopener">Falar com o Renan</a>
+      <button
+        class="header__menu-btn"
+        data-menu-btn
+        aria-expanded="false"
+        aria-controls="menu-mobile"
+        aria-label="Abrir menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="header__menu-mobile" id="menu-mobile" data-menu-mobile aria-label="Navegação mobile">
+      <a href="#inicio">Início</a>
+      <a href="#barbearia">A Barbearia</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#localizacao">Localização</a>
+      <a class="btn btn--contorno btn--bloco" data-whatsapp-link target="_blank" rel="noopener">Falar com o Renan</a>
+    </nav>
+  </header>
+
+  <main id="conteudo-principal">
+    <section class="hero" id="inicio">
+      <div class="hero__media" data-parallax>
+        <img
+          class="hero__imagem"
+          data-img-hero
+          alt=""
+          width="1920"
+          height="1281"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </div>
+      <div class="hero__overlay"></div>
+      <div class="hero__conteudo container">
+        <p class="hero__eyebrow">Barber Shop Renan</p>
+        <h1 class="hero__titulo">O estilo começa no detalhe.</h1>
+        <p class="hero__descricao">
+          Corte masculino, barba e cuidado com a presença de quem entende que estilo também está nos detalhes.
+        </p>
+        <div class="hero__acoes">
+          <a class="btn btn--primario btn--grande" data-whatsapp-link target="_blank" rel="noopener">Falar com o Renan</a>
+          <a class="btn btn--fantasma" href="#barbearia">Conhecer a barbearia ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" data-marquee>
+        <span class="marquee__item">Corte Masculino</span>
+        <span class="marquee__item">Barba</span>
+        <span class="marquee__item">Sobrancelhas</span>
+        <span class="marquee__item">Estilo</span>
+        <span class="marquee__item">Tradição</span>
+      </div>
+    </div>
+
+    <section class="secao" id="barbearia">
+      <div class="container sobre__grid" data-stagger>
+        <div class="sobre__media">
+          <img data-img-sobre alt="" width="1000" height="1250" loading="lazy" decoding="async" />
+        </div>
+        <div class="sobre__texto">
+          <p class="secao__rotulo">A Barbearia</p>
+          <h2 class="secao__titulo">Mais que um corte. Uma questão de estilo.</h2>
+          <p>
+            A Barber Shop Renan é uma barbearia focada no cuidado masculino, reunindo corte de cabelo, barba,
+            sobrancelhas e outros cuidados estéticos em um ambiente pensado nos mínimos detalhes.
+          </p>
+          <p>
+            Cada atendimento é conduzido com atenção, tradição e o cuidado de quem entende que a aparência é
+            parte da identidade de cada cliente.
+          </p>
+          <div class="sobre__tags">
+            <span>Tradição</span><span>Estilo</span><span>Cuidado</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="identidade">
+      <img class="identidade__marca-dagua" src="assets/images/logo/logo-provisorio.svg" alt="" aria-hidden="true" loading="lazy" />
+      <div class="container identidade__conteudo" data-reveal>
+        <div class="identidade__linha"></div>
+        <p class="identidade__frase">“Seu estilo começa antes mesmo do primeiro corte.”</p>
+      </div>
+    </section>
+
+    <section class="secao" id="barbeiro">
+      <div class="container barbeiro__grid" data-stagger>
+        <div class="barbeiro__media">
+          <img data-img-barbeiro alt="" width="900" height="1200" loading="lazy" decoding="async" />
+        </div>
+        <div class="barbeiro__texto">
+          <p class="secao__rotulo">O Barbeiro</p>
+          <h2 class="barbeiro__nome">Renan</h2>
+          <p>
+            Na Barber Shop Renan, cada atendimento é pensado para valorizar o estilo de cada cliente, com atenção
+            aos detalhes e cuidado em cada etapa do serviço.
+          </p>
+          <p>Em breve, esta seção contará a história, a trajetória e as especialidades do Renan diretamente por ele.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="frase-impacto">
+      <div class="container">
+        <p class="frase-impacto__texto" data-reveal>Seu estilo fala antes mesmo de você dizer uma palavra.</p>
+      </div>
+    </section>
+
+    <section class="secao servicos" id="servicos">
+      <div class="container">
+        <div class="secao__cabecalho secao__cabecalho--centro">
+          <p class="secao__rotulo">Serviços</p>
+          <h2 class="secao__titulo">O cuidado que completa o seu estilo.</h2>
+        </div>
+
+        <div class="servicos__grid" data-stagger>
+          <article class="servico-card">
+            <span class="servico-card__numero" aria-hidden="true">01</span>
+            <div class="servico-card__media">
+              <img data-img-servico-corte alt="" width="700" height="525" loading="lazy" decoding="async" />
+            </div>
+            <div class="servico-card__corpo">
+              <h3 class="servico-card__titulo">Corte Masculino</h3>
+              <p class="servico-card__descricao">
+                Cortes personalizados para valorizar o estilo de cada cliente, com acabamento preciso.
+              </p>
+              <!-- Preço e duração entram aqui após confirmação do proprietário:
+                   <p class="servico-card__meta">
+                     <span class="servico-card__preco" data-preco></span>
+                     <span class="servico-card__duracao" data-duracao></span>
+                   </p> -->
+            </div>
+          </article>
+
+          <article class="servico-card">
+            <span class="servico-card__numero" aria-hidden="true">02</span>
+            <div class="servico-card__media">
+              <img data-img-servico-barba alt="" width="700" height="525" loading="lazy" decoding="async" />
+            </div>
+            <div class="servico-card__corpo">
+              <h3 class="servico-card__titulo">Barba</h3>
+              <p class="servico-card__descricao">
+                Cuidado e acabamento da barba, com técnica e atenção a cada detalhe do design.
+              </p>
+            </div>
+          </article>
+
+          <article class="servico-card">
+            <span class="servico-card__numero" aria-hidden="true">03</span>
+            <div class="servico-card__media">
+              <img data-img-servico-sobrancelha alt="" width="700" height="525" loading="lazy" decoding="async" />
+            </div>
+            <div class="servico-card__corpo">
+              <h3 class="servico-card__titulo">Sobrancelhas</h3>
+              <p class="servico-card__descricao">Design e acabamento masculino, equilibrando o rosto com naturalidade.</p>
+            </div>
+          </article>
+
+          <article class="servico-card">
+            <span class="servico-card__numero" aria-hidden="true">04</span>
+            <div class="servico-card__media">
+              <img data-img-servico-tratamentos alt="" width="700" height="525" loading="lazy" decoding="async" />
+            </div>
+            <div class="servico-card__corpo">
+              <h3 class="servico-card__titulo">Tratamentos</h3>
+              <p class="servico-card__descricao">
+                Área reservada para os tratamentos estéticos capilares, a confirmar com o proprietário.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <p class="servicos__aviso">* Preços e duração dos serviços serão adicionados após a confirmação do proprietário.</p>
+      </div>
+    </section>
+
+    <section class="secao experiencia">
+      <div class="container">
+        <div class="secao__cabecalho secao__cabecalho--centro">
+          <p class="secao__rotulo">A Experiência</p>
+          <h2 class="secao__titulo">Cada etapa pensada para o seu momento.</h2>
+        </div>
+
+        <div class="experiencia__grid" data-stagger>
+          <div class="experiencia-passo">
+            <p class="experiencia-passo__numero" aria-hidden="true">01</p>
+            <h3 class="experiencia-passo__titulo">Chegue</h3>
+            <p class="experiencia-passo__descricao">Entre, sente e deixe o resto com o barbeiro.</p>
+          </div>
+          <div class="experiencia-passo">
+            <p class="experiencia-passo__numero" aria-hidden="true">02</p>
+            <h3 class="experiencia-passo__titulo">Escolha</h3>
+            <p class="experiencia-passo__descricao">Defina o estilo que combina com você.</p>
+          </div>
+          <div class="experiencia-passo">
+            <p class="experiencia-passo__numero" aria-hidden="true">03</p>
+            <h3 class="experiencia-passo__titulo">Relaxe</h3>
+            <p class="experiencia-passo__descricao">Aproveite o momento.</p>
+          </div>
+          <div class="experiencia-passo">
+            <p class="experiencia-passo__numero" aria-hidden="true">04</p>
+            <h3 class="experiencia-passo__titulo">Saia Renovado</h3>
+            <p class="experiencia-passo__descricao">Um novo acabamento para continuar o dia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="galeria">
+      <div class="container">
+        <div class="secao__cabecalho">
+          <p class="secao__rotulo">Galeria</p>
+          <h2 class="secao__titulo">O ambiente e os detalhes.</h2>
+        </div>
+        <div class="galeria__grid" data-galeria-grid></div>
+      </div>
+    </section>
+
+    <section class="secao avaliacoes" id="avaliacoes">
+      <div class="container">
+        <div class="secao__cabecalho secao__cabecalho--centro">
+          <p class="secao__rotulo">Avaliações</p>
+          <h2 class="secao__titulo">Quem já sentou na cadeira sabe.</h2>
+          <p>Experiências de quem já passou pela Barber Shop Renan.</p>
+        </div>
+        <div class="avaliacoes__grid" data-avaliacoes-lista></div>
+      </div>
+    </section>
+
+    <section class="secao localizacao" id="localizacao">
+      <div class="container localizacao__grid" data-stagger>
+        <div>
+          <p class="secao__rotulo">Onde nos encontrar</p>
+          <h2 class="secao__titulo">Seu próximo corte está mais perto do que você imagina.</h2>
+
+          <div class="localizacao__lista">
+            <div class="localizacao__item">
+              <span class="localizacao__rotulo">Endereço</span>
+              <p class="localizacao__valor" data-endereco-rua></p>
+              <p class="localizacao__valor" data-endereco-bairro></p>
+            </div>
+            <div class="localizacao__item">
+              <span class="localizacao__rotulo">Telefone</span>
+              <p class="localizacao__valor" data-telefone-texto></p>
+            </div>
+            <div class="localizacao__item">
+              <span class="localizacao__rotulo">Horário</span>
+              <p class="localizacao__valor"><span data-horario-dias></span> — <span data-horario-faixa></span></p>
+              <p class="localizacao__valor">Domingo — <span data-horario-domingo></span></p>
+            </div>
+          </div>
+
+          <div class="localizacao__acoes">
+            <a class="btn btn--primario" data-whatsapp-link target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+            <a class="btn btn--contorno" data-tel-link>Ligar para a barbearia</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="mapa-facade" data-mapa-facade data-reveal>
+            <img
+              class="mapa-facade__imagem"
+              src="assets/images/placeholder-mapa.svg"
+              alt="Ilustração esquemática do mapa da região da Barber Shop Renan"
+              loading="lazy"
+            />
+            <button class="btn btn--primario mapa-facade__btn" data-mapa-btn>Ver no mapa</button>
+          </div>
+          <div class="localizacao__acoes">
+            <a class="btn btn--fantasma" data-direcoes-link target="_blank" rel="noopener">Abrir no Google Maps →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final" data-cta-final>
+      <div class="container">
+        <img class="cta-final__logo" src="assets/images/logo/logo-provisorio.svg" alt="Barber Shop Renan" width="68" height="68" loading="lazy" />
+        <h2 class="cta-final__titulo">Seu próximo corte começa aqui.</h2>
+        <p class="cta-final__texto">Entre em contato com a Barber Shop Renan e encontre um horário para você.</p>
+        <div class="cta-final__acoes">
+          <a class="btn btn--primario btn--grande" data-whatsapp-link target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+          <a class="btn btn--contorno btn--grande" data-tel-link>Ligar agora</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__coluna">
+        <p class="footer__marca">
+          <img src="assets/images/logo/logo-provisorio.svg" alt="" width="36" height="36" />
+          Barber Shop Renan
+        </p>
+        <p data-endereco-rua></p>
+        <p data-endereco-bairro></p>
+        <p data-telefone-texto></p>
+      </div>
+
+      <div class="footer__coluna">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#barbearia">A Barbearia</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#localizacao">Localização</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__coluna">
+        <h3>Horário</h3>
+        <p><span data-horario-dias></span><br /><span data-horario-faixa></span></p>
+        <p>Domingo — <span data-horario-domingo></span></p>
+      </div>
+    </div>
+
+    <div class="container footer__base">
+      <p>&copy; <span data-ano-atual></span> Barber Shop Renan. Todos os direitos reservados.</p>
+      <p>Desenvolvido por Gabriel Belentani Felipe</p>
+    </div>
+  </footer>
+
+  <a
+    class="whatsapp-flutuante"
+    data-whatsapp-flutuante
+    data-whatsapp-link
+    target="_blank"
+    rel="noopener"
+    aria-label="Falar no WhatsApp com a Barber Shop Renan"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.5-1.8-.2-.3 0-.4.1-.5.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.5 1.1 2.7c.1.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.2-.3-.2-.5-.3z"
+      />
+      <path
+        d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.3L2 22l4.8-1.5C8.3 21.5 10.1 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3.2 1 1-3.1-.2-.3C3.7 14.8 3.2 13.4 3.2 12c0-4.8 3.9-8.8 8.8-8.8s8.8 3.9 8.8 8.8-3.9 8-8.8 8z"
+      />
+    </svg>
+  </a>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/reviews.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* CTA final — fundo quase preto, logo grande, dois botões (item 31). */
+
+.cta-final {
+  text-align: center;
+  padding-block: var(--espaco-xxl);
+  background: var(--cor-fundo);
+}
+
+.cta-final__logo {
+  width: 68px;
+  height: 68px;
+  margin-inline: auto;
+  margin-bottom: var(--espaco-md);
+  opacity: 0.9;
+}
+
+.cta-final__titulo {
+  font-size: clamp(2.2rem, 3.6vw + 1.2rem, 3.75rem);
+  max-width: 16ch;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+}
+
+.cta-final__texto {
+  max-width: 46ch;
+  margin-inline: auto;
+  margin-bottom: var(--espaco-lg);
+}
+
+.cta-final__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--espaco-sm);
+}

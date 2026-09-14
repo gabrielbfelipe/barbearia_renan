@@ -1,0 +1,13 @@
+/* A Experiência — jornada em 4 passos (item 20). */
+
+.experiencia__grid {
+  display: grid;
+  gap: var(--espaco-lg);
+  grid-template-columns: repeat(auto-fit, minmax(min(210px, 100%), 1fr));
+}
+
+@media (min-width: 860px) {
+  .experiencia__grid > .experiencia-passo:not(:first-child) {
+    border-left: 1px solid var(--cor-borda);
+  }
+}

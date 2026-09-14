@@ -1,0 +1,93 @@
+/* Layout — contêiner, ritmo vertical das seções e o rótulo pequeno que
+   antecede todo H2 ("A BARBEARIA", "SERVIÇOS", etc). Compartilhado pelas
+   11 seções de conteúdo para evitar repetição. */
+
+.container {
+  width: min(100% - 2.5rem, var(--largura-maxima));
+  margin-inline: auto;
+}
+
+.secao {
+  padding-block: var(--espaco-xxl);
+}
+
+.secao--compacta {
+  padding-block: var(--espaco-xl);
+}
+
+.secao__rotulo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--fonte-corpo);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--cor-dourado);
+  margin-bottom: var(--espaco-md);
+}
+
+.secao__rotulo::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--cor-dourado);
+}
+
+.secao__titulo {
+  font-size: clamp(2rem, 4vw + 1rem, 3.25rem);
+  max-width: 18ch;
+}
+
+.secao__cabecalho {
+  max-width: 640px;
+  margin-bottom: var(--espaco-xl);
+}
+
+.secao__cabecalho--centro {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.secao__cabecalho--centro p {
+  margin-inline: auto;
+}
+
+.linha-dourada {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cor-dourado) 50%, transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.linha-dourada.is-visible {
+  transform: scaleX(1);
+}
+
+.grid-auto {
+  display: grid;
+  gap: var(--espaco-lg);
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 860px) {
+  .secao__cabecalho {
+    margin-bottom: var(--espaco-xxl);
+  }
+}

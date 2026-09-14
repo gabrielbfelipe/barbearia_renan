@@ -1,0 +1,15 @@
+/* Frase de impacto — transição visual com bastante espaço vazio (item 17). */
+
+.frase-impacto {
+  padding-block: var(--espaco-xxl);
+  text-align: center;
+}
+
+.frase-impacto__texto {
+  font-size: clamp(2rem, 3.4vw + 1.4rem, 3.75rem);
+  max-width: 19ch;
+  line-height: 1.25;
+  margin-inline: auto;
+  text-transform: uppercase;
+  color: var(--cor-branco-quente);
+}

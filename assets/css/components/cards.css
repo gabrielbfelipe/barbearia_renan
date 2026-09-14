@@ -1,0 +1,111 @@
+/* Cards reutilizáveis — serviços e passos da experiência (itens 18–20). */
+
+.servico-card {
+  position: relative;
+  background: var(--cor-fundo-secundario);
+  border: 1px solid var(--cor-borda);
+  overflow: hidden;
+  transition: border-color var(--transicao-padrao), transform var(--transicao-padrao);
+}
+
+.servico-card:hover {
+  border-color: var(--cor-dourado);
+  transform: translateY(-4px);
+}
+
+.servico-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--cor-marrom-profundo);
+}
+
+.servico-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.servico-card:hover .servico-card__media img {
+  transform: scale(1.07);
+}
+
+.servico-card__numero {
+  position: absolute;
+  top: 0.9rem;
+  right: 1.1rem;
+  font-family: var(--fonte-titulo);
+  font-size: 2.75rem;
+  color: rgba(184, 150, 85, 0.35);
+  transition: color var(--transicao-padrao);
+  z-index: 1;
+}
+
+.servico-card:hover .servico-card__numero {
+  color: var(--cor-dourado-claro);
+}
+
+.servico-card__corpo {
+  padding: var(--espaco-md);
+}
+
+.servico-card__titulo {
+  font-size: 1.45rem;
+  margin-bottom: 0.5rem;
+  transition: transform var(--transicao-padrao), color var(--transicao-padrao);
+}
+
+.servico-card:hover .servico-card__titulo {
+  transform: translateX(6px);
+  color: var(--cor-dourado-claro);
+}
+
+.servico-card__descricao {
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+
+/* Slots preparados para preço/duração (item 19) — o cliente ainda não
+   confirmou esses valores; os elementos ficam vazios e escondidos até lá. */
+.servico-card__meta {
+  display: flex;
+  gap: 1rem;
+  margin-top: var(--espaco-sm);
+  padding-top: var(--espaco-sm);
+  border-top: 1px solid var(--cor-borda);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--cor-dourado-claro);
+}
+
+.servico-card__meta:empty,
+.servico-card__preco:empty,
+.servico-card__duracao:empty {
+  display: none;
+}
+
+.experiencia-passo {
+  text-align: center;
+  padding: var(--espaco-md);
+}
+
+.experiencia-passo__numero {
+  font-family: var(--fonte-titulo);
+  font-size: 3rem;
+  color: var(--cor-dourado);
+  margin-bottom: var(--espaco-sm);
+}
+
+.experiencia-passo__titulo {
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.experiencia-passo__descricao {
+  font-size: 0.9rem;
+  margin-inline: auto;
+}

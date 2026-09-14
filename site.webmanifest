@@ -1,0 +1,10 @@
+{
+  "name": "Barber Shop Renan",
+  "short_name": "BS Renan",
+  "icons": [
+    { "src": "assets/images/logo/logo-provisorio.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "theme_color": "#11100E",
+  "background_color": "#11100E",
+  "display": "standalone"
+}

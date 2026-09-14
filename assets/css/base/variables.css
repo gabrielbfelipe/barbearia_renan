@@ -1,0 +1,51 @@
+/* Design tokens — direção "Old Money Barber": preto quente, dourado
+   envelhecido (nunca neon), creme. Ver plano §5–6. */
+
+:root {
+  /* Cores — fundo */
+  --cor-fundo: #11100e;
+  --cor-fundo-secundario: #191612;
+  --cor-marrom-profundo: #2a2119;
+  --cor-couro: #4a3322;
+
+  /* Cores — dourado */
+  --cor-dourado: #b99655;
+  --cor-dourado-claro: #d1b06a;
+
+  /* Cores — texto */
+  --cor-creme: #e8ddc8;
+  --cor-branco-quente: #f5f0e8;
+  --cor-texto-suave: #afa391;
+
+  --cor-borda: rgba(184, 150, 85, 0.22);
+  --cor-overlay-hero: linear-gradient(
+    180deg,
+    rgba(17, 16, 14, 0.55) 0%,
+    rgba(17, 16, 14, 0.72) 55%,
+    rgba(17, 16, 14, 0.97) 100%
+  );
+  --gradiente-couro: linear-gradient(160deg, var(--cor-marrom-profundo), var(--cor-fundo));
+  --sombra-card: 0 24px 48px -24px rgba(0, 0, 0, 0.65);
+
+  /* Tipografia */
+  --fonte-titulo: "Cormorant Garamond", serif;
+  --fonte-corpo: "Montserrat", sans-serif;
+
+  /* Espaçamento */
+  --espaco-xs: 0.5rem;
+  --espaco-sm: 1rem;
+  --espaco-md: 1.5rem;
+  --espaco-lg: 2.5rem;
+  --espaco-xl: 4rem;
+  --espaco-xxl: 7rem;
+
+  /* Layout */
+  --largura-maxima: 1200px;
+  --raio-borda: 4px;
+  --raio-borda-sm: 2px;
+
+  /* Transições */
+  --transicao-rapida: 0.2s ease;
+  --transicao-padrao: 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  --transicao-lenta: 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}

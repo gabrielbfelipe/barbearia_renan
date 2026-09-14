@@ -1,0 +1,49 @@
+/* Faixa de identidade — transição animada entre Hero e conteúdo (item 13).
+   JS duplica o conteúdo de [data-marquee] uma vez; a animação desloca
+   exatamente 50% da largura total para o loop ficar contínuo. */
+
+.marquee {
+  overflow: hidden;
+  background: var(--cor-fundo-secundario);
+  border-block: 1px solid var(--cor-borda);
+  padding-block: 1.15rem;
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marqueeDeslocar 32s linear infinite;
+}
+
+.marquee__item {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-inline: 1.25rem;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--cor-texto-suave);
+}
+
+.marquee__item::after {
+  content: "—";
+  color: var(--cor-dourado);
+}
+
+@keyframes marqueeDeslocar {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+  }
+}

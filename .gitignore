@@ -1,0 +1,10 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Ferramentas
+.vercel
+*.log
+
+# Logo definitivo — trocar assets/images/logo/logo-provisorio.svg quando o
+# arquivo real chegar; nenhum arquivo precisa ser ignorado por causa disso.

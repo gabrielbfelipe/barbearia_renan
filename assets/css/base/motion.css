@@ -1,0 +1,29 @@
+/* Sistema de animação central — scroll reveal + stagger.
+   JS (animations.js) só adiciona/observa classes; toda a transição é CSS. */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--i, 0) * 90ms);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  .linha-dourada,
+  .hero__imagem,
+  .hero__eyebrow,
+  .hero__titulo,
+  .hero__descricao,
+  .hero__acoes {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,75 @@
+/* Footer — informações, links e assinatura do desenvolvedor (item 32). */
+
+.footer {
+  background: var(--cor-fundo-secundario);
+  border-top: 1px solid var(--cor-borda);
+  padding-block: var(--espaco-xl) var(--espaco-lg);
+}
+
+.footer__grid {
+  display: grid;
+  gap: var(--espaco-lg);
+}
+
+.footer__marca {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--fonte-titulo);
+  font-size: 1.4rem;
+  color: var(--cor-branco-quente);
+  margin-bottom: 0.9rem;
+}
+
+.footer__marca img {
+  width: 36px;
+  height: 36px;
+}
+
+.footer__coluna p {
+  max-width: 30ch;
+}
+
+.footer__coluna h3 {
+  font-family: var(--fonte-corpo);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cor-dourado);
+  margin-bottom: 1rem;
+}
+
+.footer__coluna ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer__coluna a {
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+  transition: color var(--transicao-rapida);
+}
+
+.footer__coluna a:hover {
+  color: var(--cor-dourado-claro);
+}
+
+.footer__base {
+  margin-top: var(--espaco-xl);
+  padding-top: var(--espaco-md);
+  border-top: 1px solid var(--cor-borda);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--cor-texto-suave);
+}
+
+@media (min-width: 700px) {
+  .footer__grid {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+}

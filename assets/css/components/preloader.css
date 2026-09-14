@@ -1,0 +1,84 @@
+/* Preloader — logo, nome e linha dourada. Duração total ~1s (item 9).
+   Um subconjunto crítico destas regras também é injetado inline no <head>
+   do index.html para pintar antes do CSS externo chegar. */
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--espaco-md, 1.5rem);
+  background: var(--cor-fundo, #11100e);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.preloader--sair {
+  opacity: 0;
+  transform: translateY(-4%);
+  pointer-events: none;
+}
+
+.preloader__logo {
+  width: 64px;
+  height: 64px;
+  opacity: 0;
+  animation: preloaderLogo 0.6s ease forwards;
+}
+
+.preloader__nome {
+  font-family: var(--fonte-titulo, serif);
+  font-size: 1rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: var(--cor-creme, #e8ddc8);
+  opacity: 0;
+  animation: preloaderTexto 0.6s ease forwards;
+  animation-delay: 0.35s;
+  padding-left: 0.5em; /* compensa o letter-spacing visualmente */
+}
+
+.preloader__linha {
+  width: 0;
+  height: 1px;
+  background: var(--cor-dourado, #b99655);
+  animation: preloaderLinha 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.65s;
+}
+
+@keyframes preloaderLogo {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes preloaderTexto {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes preloaderLinha {
+  from {
+    width: 0;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader {
+    display: none;
+  }
+}
